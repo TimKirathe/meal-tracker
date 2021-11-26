@@ -1,0 +1,18 @@
+<form #mealForm='ngForm' (ngSubmit)='formSubmit(mealForm.value)' (ngSubmit)='submitMeal()'>
+  <div class="form-group">
+    <label for="mealName">Enter your meal name:</label>
+    <input required ngModel name="mealName" #mealName="ngModel" type="text" id="mealName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="mealCalories">Calories:</label>
+    <input required ngModel name="mealCalories" #mealCalories="ngModel" type="text" id="mealCalories" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="mealDetails">Extra Details:</label>
+    <textarea required ngModel name="mealDetails" #mealDetails="ngModel" id="mealDetails" rows="3" class="form-control"></textarea>
+  </div>
+  <button type="submit" id="submitButton" class="btn btn-outline-success">Submit Meal</button>
+  <!--<button type="button" id="viewButton" class="btn btn-outline-success" routerLink='/mealDetails'>View Meals</button>-->
+</form>
+<br>
+<!--<app-meal-display [meals]='meals'></app-meal-display>-->

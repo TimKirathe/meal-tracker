@@ -1,0 +1,44 @@
+<app-meal-form (addNewMeal)='pushMeal($event)'></app-meal-form>
+<br>
+<div class="contain2">
+  <div class="mealSection">
+    <h5 class="display-5">Your Meals</h5>
+    <table>
+      <tr>
+        <th>Id:</th>
+        <th>Meal Name:</th>
+        <th>Meal Calories:</th>
+        <th>Meal Details:</th>
+        <th>Edit Meal:</th>
+      </tr>
+      <tr *ngFor="let meal of meals">
+        <td>{{meal.id}}</td>
+        <td>{{meal.name}}</td>
+        <td>{{meal.calories}}</td>
+        <td>{{meal.details}}</td>
+        <td><i class="fa fa-edit" routerLink='/update/{{meal.id}}'></i></td>
+      </tr>
+    </table>
+    <!--<h5 class="display-5">Meal Name:</h5>
+    <p>{{meal.name}}</p>
+    <br>
+    <h5 class="display-5">Meal Calories:</h5>
+    <p>{{meal.calories}}</p>
+    <br>
+    <h5 class="display-5">Meal Details:</h5>
+    <p>{{meal.details}}</p>
+    <button type="submit" class="btn btn-outline-success editButton" routerLink="/update/{{meal.id}}">Edit</button>-->
+  </div>
+  <!--<div class="mealSection" *ngIf="meal.calories < 500">
+    <h1 class="display-1">Meals below 500 calories</h1>
+    <h5 class="display-5">Meal Name:</h5>
+    <p>{{meal.name}}</p>
+    <br>
+    <h5 class="display-5">Meal Calories:</h5>
+    <p>{{meal.calories}}</p>
+    <br>
+    <h5 class="display-5">Meal Details:</h5>
+    <p>{{meal.details}}</p>
+    <button type="submit" class="btn btn-outline-success editButton" routerLink="/update/{{meal.id}}">Edit</button>
+  </div>-->
+</div>

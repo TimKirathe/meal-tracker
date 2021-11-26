@@ -1,0 +1,15 @@
+<form #editMealForm='ngForm' (ngSubmit)='editMealForm.reset()'>
+  <div class="form-group">
+    <label for="mealName">Enter your meal name:</label>
+    <input required ngModel name="mealName" #mealName="ngModel" type="text" id="mealName" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="mealCalories">Calories:</label>
+    <input required ngModel name="mealCalories" #mealCalories="ngModel" type="text" id="mealCalories" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="mealDetails">Extra Details:</label>
+    <textarea required ngModel name="mealDetails" #mealDetails="ngModel" id="mealDetails" rows="3" class="form-control"></textarea>
+  </div>
+  <button id="submitButton" class="btn btn-outline-success">Update Meal</button>
+</form>
